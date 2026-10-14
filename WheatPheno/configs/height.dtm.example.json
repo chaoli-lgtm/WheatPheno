@@ -1,0 +1,11 @@
+{
+  "dsm": "inputs/maturity_dsm.tif",
+  "dtm": "inputs/ground_dtm.tif",
+  "elevation_units": "m",
+  "boundary": "inputs/field.shp",
+  "block_pixels": 10,
+  "percentile": 95,
+  "minimum_valid_fraction": 0.5,
+  "dsm_offset_m": 0,
+  "display_fill_distance_m": 0
+}

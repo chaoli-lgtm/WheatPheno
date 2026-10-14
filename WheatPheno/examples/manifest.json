@@ -1,0 +1,27 @@
+{
+  "selection_policy": "Fixed positional sampling within each trial; no residual/ranking filter. Demonstration only; rows overlap model training.",
+  "tables": {
+    "AGB": {
+      "rows": 12,
+      "selection": "Three evenly spaced input row positions per trial, before examining residuals",
+      "training_overlap": true,
+      "validation_use": false
+    },
+    "Yield": {
+      "rows": 9,
+      "selection": "Three evenly spaced input row positions per trial, before examining residuals",
+      "training_overlap": true,
+      "validation_use": false
+    }
+  },
+  "scenes": {},
+  "table_contract": "wheatpheno-frozen-nir2-v1",
+  "ndre_formula": "(Reflectance_NIR-Reflectance_RE)/(Reflectance_NIR+Reflectance_RE)",
+  "nir2_formula": "2*Reflectance_NIR; frozen-model input",
+  "release_selection": "Limited table fixtures verified against original fixed predictions and source reflectances; no real spatial rasters are distributed.",
+  "synthetic": {
+    "role": "Deterministic functional tests only; not field observations or accuracy evidence",
+    "feature_input": "synthetic/feature_input.npz",
+    "training_input": "synthetic/training_demo.csv"
+  }
+}
