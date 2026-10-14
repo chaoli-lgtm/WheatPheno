@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "input_csv": "../examples/synthetic/training_demo.csv",
+  "target": "AGB",
+  "target_column": "observed",
+  "group_column": "plot",
+  "id_column": "sample_id",
+  "trial_column": "trial",
+  "protocol": "quick",
+  "models": [
+    "RF",
+    "SVR",
+    "PLSR",
+    "ExtraTrees"
+  ],
+  "seeds": [
+    42
+  ],
+  "outer_folds": 2,
+  "inner_folds": 2,
+  "feature_group_ablation": true,
+  "bootstrap_replicates": 0,
+  "refit": true,
+  "n_jobs": 1,
+  "feature_contract": "wheatpheno-standard-v1"
+}

@@ -1,0 +1,581 @@
+{
+  "format_version": 2,
+  "package": "WheatPheno",
+  "scope": "Reviewed code, fixed model artifacts, aggregate benchmarks and limited public examples.",
+  "manifest_self_hash": false,
+  "file_count": 69,
+  "total_bytes": 8625215,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "size": 168,
+      "sha256": "5c7c9c93376487f60fc21ec5071f76aab189cfb3402ff76214846eca8f62f806"
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "size": 1703,
+      "sha256": "6b43886e8885a12ef4539ead71a62c8b0ebac7d9be7cd0fd6de0b61a6537c74b"
+    },
+    {
+      "path": ".gitignore",
+      "size": 109,
+      "sha256": "3fa1f4eb51256167e6ce42b417b6d60f9dece28466c45cccfbce192381ff98bd"
+    },
+    {
+      "path": ".streamlit/config.toml",
+      "size": 227,
+      "sha256": "fb5a4b24ed03f4e8d0d2e655788dc8390e3e9a0adf379912b1b635880bf5bd2c"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 1113,
+      "sha256": "0f2dcf2cdf0d1d354f4905dae5b234fe3e8481e76d31c82789a768139eb7ff42"
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 488,
+      "sha256": "1cc1e735048358730a9bacc984a677b9b00587ac9cfd5a0b0e0b19a7f0d683eb"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 2105,
+      "sha256": "544a63e895afc61a3c16eaac67972a2ca1751c6cf66ee509ad13ec3a0bded6f2"
+    },
+    {
+      "path": "DATA_LICENSE.md",
+      "size": 1894,
+      "sha256": "78ada16cf3cdf412e8e44042a46efe8045ee72e8fa17b2335e772eef41d58550"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1415,
+      "sha256": "1ad975cd06144692035dff986c978da3829b8f5866a942f1b3dc1e645687ba07"
+    },
+    {
+      "path": "README.md",
+      "size": 6421,
+      "sha256": "82fb93e316e6ca00bee4ba7b73db6fd850f636a1698f19d41aa70f2dc88cf39a"
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 2181,
+      "sha256": "7543deaee057209d066a5f59358130f4ee9a415216cdadc8b089cbbd21708680"
+    },
+    {
+      "path": "app.py",
+      "size": 19623,
+      "sha256": "ac8dbf689e1455d3dba2f865caa516878a35ffd4063a64bb6bbba685617fd679"
+    },
+    {
+      "path": "benchmarks/README.md",
+      "size": 471,
+      "sha256": "9e97684f4637bbc618677d05a85b90c8223182206641f9e913a0a1f97a91a834"
+    },
+    {
+      "path": "benchmarks/model_comparison.csv",
+      "size": 1432,
+      "sha256": "4a7646ab1e5bff88f6a218a1483230a2536e004b1d3ac86585d251c7096502a8"
+    },
+    {
+      "path": "benchmarks/repetition_metrics.csv",
+      "size": 6072,
+      "sha256": "d4b09d8eda05a51729ea5b4075697efa72749850d74276c5d3d756e5912aa78b"
+    },
+    {
+      "path": "benchmarks/subgroup_metrics.csv",
+      "size": 3795,
+      "sha256": "5decaeb6602751ca8ce6fa9ae12642e1eafd42d85a556cfa74b858c37167a166"
+    },
+    {
+      "path": "configs/height.dtm.example.json",
+      "size": 261,
+      "sha256": "9c4ee6be4ec4ccbf5f0e82ea663647c0210feb939a996b78544c48e0ad22757c"
+    },
+    {
+      "path": "configs/height.seedling.example.json",
+      "size": 299,
+      "sha256": "37a7a4d734981acd152081ed619d25c5d7f4e05d18402032c64400275c3991bb"
+    },
+    {
+      "path": "configs/rasters.example.json",
+      "size": 3902,
+      "sha256": "ac96a4a206c486656a255850de1265cc5ebd5fe4e7db1bf57ecdd699649e5c07"
+    },
+    {
+      "path": "configs/training.example.json",
+      "size": 468,
+      "sha256": "7a200bea76a71b2c3e00f56fe2e70e5807228908728bb447b9c1189986c686b3"
+    },
+    {
+      "path": "configs/training.refit.example.json",
+      "size": 515,
+      "sha256": "282a24334f05c9f53ece2f81ccc56fdb74360b84cd1f1a2cfc0f001fad7c72f2"
+    },
+    {
+      "path": "docs/DATA_CARD.md",
+      "size": 2428,
+      "sha256": "246834a11d906b3e8cdced9ac28d5bc54d35eac55efa34797f120f2158b4cfe4"
+    },
+    {
+      "path": "docs/DEPLOYMENT.md",
+      "size": 3294,
+      "sha256": "410395f77f612c9eadae666b6a360c50f773a0ede9a1f649b761bf7b3da8df58"
+    },
+    {
+      "path": "docs/FEATURE_EXTRACTION.md",
+      "size": 6358,
+      "sha256": "051dba546b62f87ac026066174c27c4e1223cc70e9106af40cbbbeb0ee974b4c"
+    },
+    {
+      "path": "docs/HEIGHT.md",
+      "size": 3839,
+      "sha256": "7f84471337e0cfbff8fd293faf02f2a47580cdaed0425e8617112e369eae0bc2"
+    },
+    {
+      "path": "docs/LOCAL_VALIDATION.md",
+      "size": 966,
+      "sha256": "7f7c0edd119f5e2543c50c3b9e9d7de7da72ccb7613d5bf3086a1eb6f1d6862b"
+    },
+    {
+      "path": "docs/METHODS.md",
+      "size": 4805,
+      "sha256": "c27bc47f98a2219dc64498253e22dcab4da11f126ae7f31b5d0b199fc803e274"
+    },
+    {
+      "path": "docs/MODEL_CARD.md",
+      "size": 2306,
+      "sha256": "0dbd6a099b46379001409f96e0336f4317631b6ff4fd5c8445f8038d971a5e99"
+    },
+    {
+      "path": "docs/RASTER_INPUT.md",
+      "size": 6082,
+      "sha256": "9c0fb0a0f1c4f260f6ee531788ae2be1335ea3330c8e0a2ae92f654b3e2b3aa8"
+    },
+    {
+      "path": "docs/REVIEW_GUIDE.md",
+      "size": 3495,
+      "sha256": "f3f019e867f7d2ec1202b60c68d96405adbe641aedcdae6e06efbbcbc2fa85d3"
+    },
+    {
+      "path": "docs/TRAINING.md",
+      "size": 8840,
+      "sha256": "30dc2b333276e9a95bb02dcf83259d138c12a129982df3301e20ed5ecbf8c4fd"
+    },
+    {
+      "path": "docs/UI_NOTES.md",
+      "size": 3719,
+      "sha256": "22394b48ba2031c26fdeeef7501b1c2e9b84400a30edc72ad835f0589a0e8978"
+    },
+    {
+      "path": "examples/manifest.json",
+      "size": 1113,
+      "sha256": "49ae3b012b569174d55669954d51409a17829471308b7aa7f15579d98d86fc0a"
+    },
+    {
+      "path": "examples/synthetic/README.md",
+      "size": 323,
+      "sha256": "8d79b6adb6fd750e2cf1ae3544a01ff1c6a556045fb8f0125096154bf58b1945"
+    },
+    {
+      "path": "examples/synthetic/feature_input.npz",
+      "size": 25989,
+      "sha256": "4cc134e0dcd51546333b26a9ac80fef261d0a061e873888a070bfb07bf16edb5"
+    },
+    {
+      "path": "examples/synthetic/training_demo.csv",
+      "size": 38619,
+      "sha256": "076a5aefae910cce882c16b20d497a46d26aa42a6290af65d228b329f95ba243"
+    },
+    {
+      "path": "examples/tables/agb_demo.csv",
+      "size": 17350,
+      "sha256": "4e96ab24e87d80dccb664d68f8f76aa76f788e86785b01dab1d082627a2d7f11"
+    },
+    {
+      "path": "examples/tables/agb_expected.csv",
+      "size": 338,
+      "sha256": "6e5bcd9adc14db29a8974b8e8a1e4f9ec2d969c3776de3d8aaf37f1996ca0466"
+    },
+    {
+      "path": "examples/tables/yield_demo.csv",
+      "size": 12438,
+      "sha256": "b79ace35408797065fc45b31f0502a57c14ad4fbcf610753d2071584e0e751d8"
+    },
+    {
+      "path": "examples/tables/yield_expected.csv",
+      "size": 269,
+      "sha256": "d8d71e0822b89562ed2249ab467648b433a80cabe23f3c20ca5502fd83e69e2b"
+    },
+    {
+      "path": "models/AGB_ExtraTrees_full_refit.joblib",
+      "size": 5512755,
+      "sha256": "ee0af68ef25c9562adda8d75bca909fd93c5d78d4d16a8daa4b17fb2406ad062"
+    },
+    {
+      "path": "models/Yield_ExtraTrees_full_refit.joblib",
+      "size": 2666307,
+      "sha256": "e0dc7a6709a17da44047e6f6380c20cf97fabeec98d080bee64cc23e0c92a882"
+    },
+    {
+      "path": "models/manifest.json",
+      "size": 23929,
+      "sha256": "a1be522c3e9272fe9c0b44ddc0923dec5cdbec948931a8223e8699963951490b"
+    },
+    {
+      "path": "models/schema.json",
+      "size": 23530,
+      "sha256": "b6230a2e54d23227b45e2c4b2314122d6556045a5cc0bbdaeb0de7c1c534f566"
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 1644,
+      "sha256": "c9f0acf31d04b70ec035729bd748dbe989c7cb3be1889615d273e25a239e5fb5"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "size": 1119,
+      "sha256": "b7109e02e24af9d9555f878c87dd720ace8f4e9ed455da832c887596769ffe2c"
+    },
+    {
+      "path": "scripts/build_release.py",
+      "size": 11572,
+      "sha256": "d73922336d0e29752d72fc00f08594b258b2402f4900d95567dc5b0e07b25b82"
+    },
+    {
+      "path": "src/wheatpheno/__init__.py",
+      "size": 86,
+      "sha256": "9f5c6bf35d6dc28fef5a00d486c7cef0dbc6e00fc8ab45bdbc88bb4e1f959144"
+    },
+    {
+      "path": "src/wheatpheno/__main__.py",
+      "size": 3728,
+      "sha256": "7fe905cc7f553a53ed2ba239ce0f9157446f4e79ee183f681c2dbefebee3925f"
+    },
+    {
+      "path": "src/wheatpheno/audit.py",
+      "size": 5120,
+      "sha256": "490f8a7a19ebfe1c98f6b97b613fb872e087f970a27e08c4b6c4bc5c2c48afe6"
+    },
+    {
+      "path": "src/wheatpheno/compat.py",
+      "size": 1500,
+      "sha256": "0fbd8e6c7396b7f1002941a056b0eb6d6e64a4419eeab3f7a766c2de0fa2442f"
+    },
+    {
+      "path": "src/wheatpheno/deployment.py",
+      "size": 3525,
+      "sha256": "b9e52ee8d103267733aaf1e7e654db0683eb4c56422fcd04ba88215e1d807e6c"
+    },
+    {
+      "path": "src/wheatpheno/features.py",
+      "size": 14864,
+      "sha256": "8683a64c2eafa61870291d6e637e2c391375ee26c3238cb2e2e5a0ef6f3624e7"
+    },
+    {
+      "path": "src/wheatpheno/height.py",
+      "size": 11751,
+      "sha256": "3c14e079a61b145d3044f1b8d5865879827de2693b623277e83fde2fe89fc176"
+    },
+    {
+      "path": "src/wheatpheno/models.py",
+      "size": 6580,
+      "sha256": "da7b061f878ee841e2c508c5a205bd4b77cccafce2a357eb0e501b064b81d176"
+    },
+    {
+      "path": "src/wheatpheno/paths.py",
+      "size": 392,
+      "sha256": "82d1d23e925d5d4ffdef3ae0f7524c16595d89ae056934caf93635c44dd8f54a"
+    },
+    {
+      "path": "src/wheatpheno/pipeline.py",
+      "size": 23933,
+      "sha256": "6fc0abb39901decde7740b313f50d307e0bb900bfd6ca1be3f688ad8845bbb1c"
+    },
+    {
+      "path": "src/wheatpheno/prepare.py",
+      "size": 15557,
+      "sha256": "435ec5c4b70a969935f5f9ffae4111a6e52abaa1454e364179a6dfc2374f1685"
+    },
+    {
+      "path": "src/wheatpheno/schema.py",
+      "size": 1537,
+      "sha256": "86d08905f900124a4ddc870a26132c54fa53ed5df401dfa7b9866a1f349ad0d2"
+    },
+    {
+      "path": "src/wheatpheno/training.py",
+      "size": 29517,
+      "sha256": "d5ed04c0f2fc703329e6dd847e0aae8defc2a6130f776beb63bda420fb75803e"
+    },
+    {
+      "path": "start_ui.ps1",
+      "size": 393,
+      "sha256": "d9a3b8ef6823521d85771e1c96f157d162937b7b6e6848f567aebf04e5e70ac4"
+    },
+    {
+      "path": "tests/test_examples.py",
+      "size": 2942,
+      "sha256": "52d315cd34adc7915ca2d83578ed0ec19daf1cdf1fcdad6ea22f834846eda7d4"
+    },
+    {
+      "path": "tests/test_features.py",
+      "size": 9666,
+      "sha256": "91caa52591b3ed602a9cbcdb830835198a5f22d6bb254d1e01da2b67fd173505"
+    },
+    {
+      "path": "tests/test_models.py",
+      "size": 8422,
+      "sha256": "61388b46c163c27e4723a6b92bec1984329366509a04c16a6af76cce5361f399"
+    },
+    {
+      "path": "tests/test_pipeline.py",
+      "size": 12788,
+      "sha256": "4e8cb439318ba738c43cbb8f0a90cfa76bf37ae2853db58c80f3bd1cb65da902"
+    },
+    {
+      "path": "tests/test_prepare.py",
+      "size": 10061,
+      "sha256": "0eaa0086860ae9a18154b62342630ff1f47e5ff474aaaf2e88c0eb40bbe3a617"
+    },
+    {
+      "path": "tests/test_release.py",
+      "size": 6528,
+      "sha256": "b794d04dea2d15b92ddba8609f0547cd011ce361f8a2c86392622e34e5ac3421"
+    },
+    {
+      "path": "tests/test_training.py",
+      "size": 7467,
+      "sha256": "a1a6c8311b4321b04d4b7ef51f1b3b6837e0b84add350bde11adcecc68642ebf"
+    },
+    {
+      "path": "tests/test_v04_workflows.py",
+      "size": 10769,
+      "sha256": "0b5e3b3d2efbb86ab8b095185e080bf77a1a0123c4b000a2ac93a957c3c44a6a"
+    }
+  ],
+  "installed_files": [
+    {
+      "root": "assets",
+      "path": "DATA_LICENSE.md",
+      "source_path": "DATA_LICENSE.md",
+      "size": 1894,
+      "sha256": "78ada16cf3cdf412e8e44042a46efe8045ee72e8fa17b2335e772eef41d58550"
+    },
+    {
+      "root": "assets",
+      "path": "LICENSE",
+      "source_path": "LICENSE",
+      "size": 1415,
+      "sha256": "1ad975cd06144692035dff986c978da3829b8f5866a942f1b3dc1e645687ba07"
+    },
+    {
+      "root": "assets",
+      "path": "app.py",
+      "source_path": "app.py",
+      "size": 19623,
+      "sha256": "ac8dbf689e1455d3dba2f865caa516878a35ffd4063a64bb6bbba685617fd679"
+    },
+    {
+      "root": "assets",
+      "path": "benchmarks/README.md",
+      "source_path": "benchmarks/README.md",
+      "size": 471,
+      "sha256": "9e97684f4637bbc618677d05a85b90c8223182206641f9e913a0a1f97a91a834"
+    },
+    {
+      "root": "assets",
+      "path": "benchmarks/model_comparison.csv",
+      "source_path": "benchmarks/model_comparison.csv",
+      "size": 1432,
+      "sha256": "4a7646ab1e5bff88f6a218a1483230a2536e004b1d3ac86585d251c7096502a8"
+    },
+    {
+      "root": "assets",
+      "path": "benchmarks/repetition_metrics.csv",
+      "source_path": "benchmarks/repetition_metrics.csv",
+      "size": 6072,
+      "sha256": "d4b09d8eda05a51729ea5b4075697efa72749850d74276c5d3d756e5912aa78b"
+    },
+    {
+      "root": "assets",
+      "path": "benchmarks/subgroup_metrics.csv",
+      "source_path": "benchmarks/subgroup_metrics.csv",
+      "size": 3795,
+      "sha256": "5decaeb6602751ca8ce6fa9ae12642e1eafd42d85a556cfa74b858c37167a166"
+    },
+    {
+      "root": "assets",
+      "path": "examples/manifest.json",
+      "source_path": "examples/manifest.json",
+      "size": 1113,
+      "sha256": "49ae3b012b569174d55669954d51409a17829471308b7aa7f15579d98d86fc0a"
+    },
+    {
+      "root": "assets",
+      "path": "examples/synthetic/README.md",
+      "source_path": "examples/synthetic/README.md",
+      "size": 323,
+      "sha256": "8d79b6adb6fd750e2cf1ae3544a01ff1c6a556045fb8f0125096154bf58b1945"
+    },
+    {
+      "root": "assets",
+      "path": "examples/synthetic/feature_input.npz",
+      "source_path": "examples/synthetic/feature_input.npz",
+      "size": 25989,
+      "sha256": "4cc134e0dcd51546333b26a9ac80fef261d0a061e873888a070bfb07bf16edb5"
+    },
+    {
+      "root": "assets",
+      "path": "examples/synthetic/training_demo.csv",
+      "source_path": "examples/synthetic/training_demo.csv",
+      "size": 38619,
+      "sha256": "076a5aefae910cce882c16b20d497a46d26aa42a6290af65d228b329f95ba243"
+    },
+    {
+      "root": "assets",
+      "path": "examples/tables/agb_demo.csv",
+      "source_path": "examples/tables/agb_demo.csv",
+      "size": 17350,
+      "sha256": "4e96ab24e87d80dccb664d68f8f76aa76f788e86785b01dab1d082627a2d7f11"
+    },
+    {
+      "root": "assets",
+      "path": "examples/tables/agb_expected.csv",
+      "source_path": "examples/tables/agb_expected.csv",
+      "size": 338,
+      "sha256": "6e5bcd9adc14db29a8974b8e8a1e4f9ec2d969c3776de3d8aaf37f1996ca0466"
+    },
+    {
+      "root": "assets",
+      "path": "examples/tables/yield_demo.csv",
+      "source_path": "examples/tables/yield_demo.csv",
+      "size": 12438,
+      "sha256": "b79ace35408797065fc45b31f0502a57c14ad4fbcf610753d2071584e0e751d8"
+    },
+    {
+      "root": "assets",
+      "path": "examples/tables/yield_expected.csv",
+      "source_path": "examples/tables/yield_expected.csv",
+      "size": 269,
+      "sha256": "d8d71e0822b89562ed2249ab467648b433a80cabe23f3c20ca5502fd83e69e2b"
+    },
+    {
+      "root": "assets",
+      "path": "models/AGB_ExtraTrees_full_refit.joblib",
+      "source_path": "models/AGB_ExtraTrees_full_refit.joblib",
+      "size": 5512755,
+      "sha256": "ee0af68ef25c9562adda8d75bca909fd93c5d78d4d16a8daa4b17fb2406ad062"
+    },
+    {
+      "root": "assets",
+      "path": "models/Yield_ExtraTrees_full_refit.joblib",
+      "source_path": "models/Yield_ExtraTrees_full_refit.joblib",
+      "size": 2666307,
+      "sha256": "e0dc7a6709a17da44047e6f6380c20cf97fabeec98d080bee64cc23e0c92a882"
+    },
+    {
+      "root": "assets",
+      "path": "models/manifest.json",
+      "source_path": "models/manifest.json",
+      "size": 23929,
+      "sha256": "a1be522c3e9272fe9c0b44ddc0923dec5cdbec948931a8223e8699963951490b"
+    },
+    {
+      "root": "assets",
+      "path": "models/schema.json",
+      "source_path": "models/schema.json",
+      "size": 23530,
+      "sha256": "b6230a2e54d23227b45e2c4b2314122d6556045a5cc0bbdaeb0de7c1c534f566"
+    },
+    {
+      "root": "package",
+      "path": "__init__.py",
+      "source_path": "src/wheatpheno/__init__.py",
+      "size": 86,
+      "sha256": "9f5c6bf35d6dc28fef5a00d486c7cef0dbc6e00fc8ab45bdbc88bb4e1f959144"
+    },
+    {
+      "root": "package",
+      "path": "__main__.py",
+      "source_path": "src/wheatpheno/__main__.py",
+      "size": 3728,
+      "sha256": "7fe905cc7f553a53ed2ba239ce0f9157446f4e79ee183f681c2dbefebee3925f"
+    },
+    {
+      "root": "package",
+      "path": "audit.py",
+      "source_path": "src/wheatpheno/audit.py",
+      "size": 5120,
+      "sha256": "490f8a7a19ebfe1c98f6b97b613fb872e087f970a27e08c4b6c4bc5c2c48afe6"
+    },
+    {
+      "root": "package",
+      "path": "compat.py",
+      "source_path": "src/wheatpheno/compat.py",
+      "size": 1500,
+      "sha256": "0fbd8e6c7396b7f1002941a056b0eb6d6e64a4419eeab3f7a766c2de0fa2442f"
+    },
+    {
+      "root": "package",
+      "path": "deployment.py",
+      "source_path": "src/wheatpheno/deployment.py",
+      "size": 3525,
+      "sha256": "b9e52ee8d103267733aaf1e7e654db0683eb4c56422fcd04ba88215e1d807e6c"
+    },
+    {
+      "root": "package",
+      "path": "features.py",
+      "source_path": "src/wheatpheno/features.py",
+      "size": 14864,
+      "sha256": "8683a64c2eafa61870291d6e637e2c391375ee26c3238cb2e2e5a0ef6f3624e7"
+    },
+    {
+      "root": "package",
+      "path": "height.py",
+      "source_path": "src/wheatpheno/height.py",
+      "size": 11751,
+      "sha256": "3c14e079a61b145d3044f1b8d5865879827de2693b623277e83fde2fe89fc176"
+    },
+    {
+      "root": "package",
+      "path": "models.py",
+      "source_path": "src/wheatpheno/models.py",
+      "size": 6580,
+      "sha256": "da7b061f878ee841e2c508c5a205bd4b77cccafce2a357eb0e501b064b81d176"
+    },
+    {
+      "root": "package",
+      "path": "paths.py",
+      "source_path": "src/wheatpheno/paths.py",
+      "size": 392,
+      "sha256": "82d1d23e925d5d4ffdef3ae0f7524c16595d89ae056934caf93635c44dd8f54a"
+    },
+    {
+      "root": "package",
+      "path": "pipeline.py",
+      "source_path": "src/wheatpheno/pipeline.py",
+      "size": 23933,
+      "sha256": "6fc0abb39901decde7740b313f50d307e0bb900bfd6ca1be3f688ad8845bbb1c"
+    },
+    {
+      "root": "package",
+      "path": "prepare.py",
+      "source_path": "src/wheatpheno/prepare.py",
+      "size": 15557,
+      "sha256": "435ec5c4b70a969935f5f9ffae4111a6e52abaa1454e364179a6dfc2374f1685"
+    },
+    {
+      "root": "package",
+      "path": "schema.py",
+      "source_path": "src/wheatpheno/schema.py",
+      "size": 1537,
+      "sha256": "86d08905f900124a4ddc870a26132c54fa53ed5df401dfa7b9866a1f349ad0d2"
+    },
+    {
+      "root": "package",
+      "path": "training.py",
+      "source_path": "src/wheatpheno/training.py",
+      "size": 29517,
+      "sha256": "d5ed04c0f2fc703329e6dd847e0aae8defc2a6130f776beb63bda420fb75803e"
+    }
+  ]
+}

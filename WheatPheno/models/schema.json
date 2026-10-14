@@ -1,0 +1,781 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "wheatpheno-frozen-ndre-v2",
+  "feature_names": [
+    "EXR",
+    "SDRB",
+    "RBRI",
+    "IKAW",
+    "CI",
+    "NDVI",
+    "RVI",
+    "CIgreen",
+    "EVI",
+    "OSAVI",
+    "CIre",
+    "NDRE",
+    "SARE",
+    "TCARI",
+    "MEVI",
+    "CC",
+    "CHM_PCT50",
+    "CHM_PCT70",
+    "CHM_PCT90",
+    "CHM_PCT95",
+    "CHM_PCT99",
+    "CHM_MIN",
+    "CHM_MAX",
+    "CHM_RANGE",
+    "CHM_MEAN",
+    "CHM_STD",
+    "CHM_CV",
+    "Texture_B_asm",
+    "Texture_B_contrast",
+    "Texture_B_correlation",
+    "Texture_B_dissimilarity",
+    "Texture_B_energy",
+    "Texture_B_entropy",
+    "Texture_B_homogeneity",
+    "Texture_B_mean",
+    "Texture_B_std",
+    "Texture_G_asm",
+    "Texture_G_contrast",
+    "Texture_G_correlation",
+    "Texture_G_dissimilarity",
+    "Texture_G_energy",
+    "Texture_G_entropy",
+    "Texture_G_homogeneity",
+    "Texture_G_mean",
+    "Texture_G_std",
+    "Texture_NIR_asm",
+    "Texture_NIR_contrast",
+    "Texture_NIR_correlation",
+    "Texture_NIR_dissimilarity",
+    "Texture_NIR_energy",
+    "Texture_NIR_entropy",
+    "Texture_NIR_homogeneity",
+    "Texture_NIR_mean",
+    "Texture_NIR_std",
+    "Texture_RE_asm",
+    "Texture_RE_contrast",
+    "Texture_RE_correlation",
+    "Texture_RE_dissimilarity",
+    "Texture_RE_energy",
+    "Texture_RE_entropy",
+    "Texture_RE_homogeneity",
+    "Texture_RE_mean",
+    "Texture_RE_std",
+    "Texture_R_asm",
+    "Texture_R_contrast",
+    "Texture_R_correlation",
+    "Texture_R_dissimilarity",
+    "Texture_R_energy",
+    "Texture_R_entropy",
+    "Texture_R_homogeneity",
+    "Texture_R_mean",
+    "Texture_R_std"
+  ],
+  "feature_count": 72,
+  "groups": {
+    "spectral": 15,
+    "structural": 12,
+    "texture": 45
+  },
+  "features": [
+    {
+      "name": "EXR",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "1.4*R-G"
+    },
+    {
+      "name": "SDRB",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "R-B"
+    },
+    {
+      "name": "RBRI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "R/B"
+    },
+    {
+      "name": "IKAW",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "(R-B)/(R+B)",
+      "plausibility_bounds": [
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "CI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "(R-B)/R"
+    },
+    {
+      "name": "NDVI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "(NIR-R)/(NIR+R)",
+      "plausibility_bounds": [
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "RVI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "NIR/R"
+    },
+    {
+      "name": "CIgreen",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "NIR/G-1"
+    },
+    {
+      "name": "EVI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "2.5*(NIR-R)/(NIR+6*R-7.5*B+1)"
+    },
+    {
+      "name": "OSAVI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "1.16*(NIR-R)/(NIR+R+0.16)"
+    },
+    {
+      "name": "CIre",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "NIR/RE-1"
+    },
+    {
+      "name": "NDRE",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "(NIR-RE)/(NIR+RE)",
+      "description": "Normalized difference red-edge index.",
+      "plausibility_bounds": [
+        -1,
+        1
+      ]
+    },
+    {
+      "name": "SARE",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "1.25*(NIR-RE)/(NIR+RE+0.25)"
+    },
+    {
+      "name": "TCARI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "3*(RE-R)-0.2*(RE-G)*(NIR/R) [historical implementation]"
+    },
+    {
+      "name": "MEVI",
+      "group": "spectral",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "historical_formula": "2.5*(NIR-RE)/(NIR+6*RE-7.5*G+1)"
+    },
+    {
+      "name": "CC",
+      "group": "structural",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Canopy fraction in the input extraction support.",
+      "plausibility_bounds": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "CHM_PCT50",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_PCT70",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_PCT90",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_PCT95",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_PCT99",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_MIN",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_MAX",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_RANGE",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "plausibility_bounds": [
+        0,
+        null
+      ]
+    },
+    {
+      "name": "CHM_MEAN",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "review_bounds": [
+        -0.5,
+        3.0
+      ]
+    },
+    {
+      "name": "CHM_STD",
+      "group": "structural",
+      "unit": "m",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference.",
+      "plausibility_bounds": [
+        0,
+        null
+      ]
+    },
+    {
+      "name": "CHM_CV",
+      "group": "structural",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Height statistic of CHM = corrected DSM minus the matched ground reference."
+    },
+    {
+      "name": "Texture_B_asm",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_contrast",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_correlation",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_dissimilarity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_energy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_entropy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_homogeneity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_mean",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_B_std",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_asm",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_contrast",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_correlation",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_dissimilarity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_energy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_entropy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_homogeneity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_mean",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_G_std",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_asm",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_contrast",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_correlation",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_dissimilarity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_energy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_entropy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_homogeneity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_mean",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_NIR_std",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_asm",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_contrast",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_correlation",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_dissimilarity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_energy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_entropy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_homogeneity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_mean",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_RE_std",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_asm",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_contrast",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_correlation",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_dissimilarity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_energy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_entropy",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_homogeneity",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_mean",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    },
+    {
+      "name": "Texture_R_std",
+      "group": "texture",
+      "unit": "1",
+      "dtype": "float64",
+      "nullable": true,
+      "description": "Stored historical GLCM descriptor; identical names do not imply equivalence to another library implementation."
+    }
+  ],
+  "reflectance_input_units": "fraction (nominal 0 to 1), not integer digital numbers",
+  "missing_policy": "Required columns may contain NaN. Infinities become NaN. Each prediction row must have finite values in at least 50% of all 72 candidates and at least 50% of the target model selected features; otherwise it is rejected. The frozen model imputes other missing values with stored training medians.",
+  "mapping": {
+    "training_support": "plot summaries",
+    "mapping_support": "local cells of 10 by 10 native DSM pixels in the historical map implementation",
+    "cell_sizes_m": {
+      "CX2024": 0.0815,
+      "TX2024": 0.1149
+    },
+    "ph_formula": "PH_cm = CHM_PCT95 * 100",
+    "ground_reference": "Matched corrected plot ground levels; plot polygons assign values, nearest plot centroid outside polygons in the historical map.",
+    "historical_feature_mask": "OSAVI >= 0.3 for CC and CHM statistics; retain semantics of supplied feature layers.",
+    "display_mask": "Use user-supplied mapping polygon and source coverage; OSAVI is not a final visualization mask.",
+    "osavi_predictor": "OSAVI remains a fixed-model input; disabling a display mask does not remove this feature.",
+    "interpolation": "Any display gap filling must remain distinct from original predictions and carry a quality mask.",
+    "scale_limitation": "Plot validation does not establish local-window or pixel-level accuracy."
+  },
+  "texture_contract": {
+    "bands_in_order": [
+      "B",
+      "G",
+      "NIR",
+      "RE",
+      "R"
+    ],
+    "descriptors_in_order": [
+      "asm",
+      "contrast",
+      "correlation",
+      "dissimilarity",
+      "energy",
+      "entropy",
+      "homogeneity",
+      "mean",
+      "std"
+    ],
+    "gray_levels": 8,
+    "moving_window_pixels": [
+      5,
+      5
+    ],
+    "offset_pixels": [
+      1,
+      0
+    ],
+    "provenance": "Historical stored layers with per-image normalization; original mean, std and correlation formulas are not interchangeable with standard GLCM library formulas.",
+    "policy": "Use verified precomputed layers for frozen-model reproduction; new extraction definitions require validation."
+  },
+  "task_layer_overrides": {
+    "AGB": {
+      "Texture_NIR_mean": "Historical NIR mean layer from the yield extraction stream."
+    },
+    "Yield": {
+      "Texture_NIR_mean": "Historical NIR mean layer from the yield extraction stream.",
+      "Texture_G_std": "Historical green std layer from the yield extraction stream.",
+      "Texture_R_std": "Historical red std layer from the AGB extraction stream."
+    }
+  },
+  "plausibility_policy": "Bounds are review aids and are never used to clip predictions or alter fixed inputs. Training ranges are separate empirical summaries.",
+  "spectral_input_alignment": {
+    "NDRE": "(NIR-RE)/(NIR+RE); used in both frozen models and feature extraction."
+  }
+}
